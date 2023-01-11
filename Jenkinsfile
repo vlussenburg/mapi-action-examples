@@ -7,7 +7,7 @@ pipeline {
                 echo 'Building..'
                 sh '''
                       pip install -r requirements.txt 
-                      FASTAPI_ENV=test uvicorn src.main:app &
+                      FASTAPI_ENV=test python3 -m uvicorn src.main:app &
                    '''
             }
         }
